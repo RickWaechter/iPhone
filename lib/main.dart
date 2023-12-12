@@ -36,7 +36,9 @@ class _WebViewAppState extends State<WebViewApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: WebViewStack(controller: controller),
+      body: SafeArea(
+        child: WebViewStack(controller: controller),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // Hier wird der Cache gelöscht
